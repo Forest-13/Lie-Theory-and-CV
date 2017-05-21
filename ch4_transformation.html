@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>transformation.md—D:\Document\Notes\lie-groups-lie-algebras-cv</title>
+    <style type="text/css">
+    html{font-family: sans-serif;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%}body{margin: 0}article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display: block}audio,canvas,progress,video{display: inline-block;vertical-align: baseline}audio:not([controls]){display: none;height: 0}[hidden],template{display: none}a{background: transparent}a:active,a:hover{outline: 0}abbr[title]{border-bottom: 1px dotted}b,strong{font-weight: bold}dfn{font-style: italic}h1{font-size: 2em;margin: 0.67em 0}mark{background: #ff0;color: #000}small{font-size: 80%}sub,sup{font-size: 75%;line-height: 0;position: relative;vertical-align: baseline}sup{top: -0.5em}sub{bottom: -0.25em}img{border: 0}svg:not(:root){overflow: hidden}figure{margin: 1em 40px}hr{box-sizing: content-box;height: 0}pre{overflow: auto}code,kbd,pre,samp{font-family: monospace, monospace;font-size: 1em}button,input,optgroup,select,textarea{color: inherit;font: inherit;margin: 0}button{overflow: visible}button,select{text-transform: none}button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance: button;cursor: pointer}button[disabled],html input[disabled]{cursor: default}button::-moz-focus-inner,input::-moz-focus-inner{border: 0;padding: 0}input{line-height: normal}input[type="checkbox"],input[type="radio"]{box-sizing: border-box;padding: 0}input[type="number"]::-webkit-inner-spin-button,input[type="number"]::-webkit-outer-spin-button{height: auto}input[type="search"]{-webkit-appearance: textfield;box-sizing: content-box}input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance: none}fieldset{border: 1px solid #c0c0c0;margin: 0 2px;padding: 0.35em 0.625em 0.75em}legend{border: 0;padding: 0}textarea{overflow: auto}optgroup{font-weight: bold}table{border-collapse: collapse;border-spacing: 0}td,th{padding: 0}*{box-sizing: border-box}input,select,textarea,button{font: 13px/1.4 Helvetica, arial, freesans, clean, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"}body{min-width: 1020px;font: 13px/1.4 Helvetica, arial, freesans, clean, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";color: #333;background-color: #fff}a{color: #4183c4;text-decoration: none}a:hover,a:active{text-decoration: underline}hr,.rule{height: 0;margin: 15px 0;overflow: hidden;background: transparent;border: 0;border-bottom: 1px solid #ddd}hr:before,.rule:before{display: table;content: ""}hr:after,.rule:after{display: table;clear: both;content: ""}h1,h2,h3,h4,h5,h6{margin-top: 15px;margin-bottom: 15px;line-height: 1.1}h1{font-size: 30px}h2{font-size: 21px}h3{font-size: 16px}h4{font-size: 14px}h5{font-size: 12px}h6{font-size: 11px}small{font-size: 90%}blockquote{margin: 0}.lead{margin-bottom: 30px;font-size: 20px;font-weight: 300;color: #555}.text-muted{color: #999}.text-danger{color: #bd2c00}.text-emphasized{font-weight: bold;color: #333}ul,ol{padding: 0;margin-top: 0;margin-bottom: 0}ol ol,ul ol{list-style-type: lower-roman}ul ul ol,ul ol ol,ol ul ol,ol ol ol{list-style-type: lower-alpha}dd{margin-left: 0}tt,code{font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;font-size: 12px}pre{margin-top: 0;margin-bottom: 0;font: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace}#realtime .status{overflow: visible;position: absolute;top: -5px;left: 0;background: url("/public/images/github-status.png");width: 26px;height: 26px;display: block;margin: 0 5px 0 0}#realtime .up{background-position: 0 0}#realtime .problem{background-position: 0 -53px}#realtime .down{background-position: 0 -26px}.container{max-width: 920px;margin: 0 auto 20px auto}#header{background: #FAFAFA;background: -moz-linear-gradient(#FAFAFA, #EAEAEA);background: -webkit-linear-gradient(#FAFAFA, #EAEAEA);-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#fafafa', endColorstr='#eaeaea')";border-bottom: 1px solid #CACACA;box-shadow: 0 1px 0 rgba(255, 255, 255, 0.4),0 0 10px rgba(0, 0, 0, 0.1)}#markup{padding: 3px}#markup article{padding-top: 30px}.markdown-body{overflow: hidden;font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;font-size: 16px;line-height: 1.6;word-wrap: break-word}.markdown-body>*:first-child{margin-top: 0 !important}.markdown-body>*:last-child{margin-bottom: 0 !important}.markdown-body .absent{color: #c00}.markdown-body .anchor{position: absolute;top: 0;left: 0;display: block;padding-right: 6px;padding-left: 30px;margin-left: -30px}.markdown-body .anchor:focus{outline: none}.markdown-body h1,.markdown-body h2,.markdown-body h3,.markdown-body h4,.markdown-body h5,.markdown-body h6{position: relative;margin-top: 1em;margin-bottom: 16px;font-weight: bold;line-height: 1.4}.markdown-body h1 .octicon-link,.markdown-body h2 .octicon-link,.markdown-body h3 .octicon-link,.markdown-body h4 .octicon-link,.markdown-body h5 .octicon-link,.markdown-body h6 .octicon-link{display: none;color: #000;vertical-align: middle}.markdown-body h1:hover .anchor,.markdown-body h2:hover .anchor,.markdown-body h3:hover .anchor,.markdown-body h4:hover .anchor,.markdown-body h5:hover .anchor,.markdown-body h6:hover .anchor{padding-left: 8px;margin-left: -30px;text-decoration: none}.markdown-body h1:hover .anchor .octicon-link,.markdown-body h2:hover .anchor .octicon-link,.markdown-body h3:hover .anchor .octicon-link,.markdown-body h4:hover .anchor .octicon-link,.markdown-body h5:hover .anchor .octicon-link,.markdown-body h6:hover .anchor .octicon-link{display: inline-block}.markdown-body h1 tt,.markdown-body h1 code,.markdown-body h2 tt,.markdown-body h2 code,.markdown-body h3 tt,.markdown-body h3 code,.markdown-body h4 tt,.markdown-body h4 code,.markdown-body h5 tt,.markdown-body h5 code,.markdown-body h6 tt,.markdown-body h6 code{font-size: inherit}.markdown-body h1{padding-bottom: 0.3em;font-size: 2.25em;line-height: 1.2;border-bottom: 1px solid #eee}.markdown-body h1 .anchor{line-height: 1}.markdown-body h2{padding-bottom: 0.3em;font-size: 1.75em;line-height: 1.225;border-bottom: 1px solid #eee}.markdown-body h2 .anchor{line-height: 1}.markdown-body h3{font-size: 1.5em;line-height: 1.43}.markdown-body h3 .anchor{line-height: 1.2}.markdown-body h4{font-size: 1.25em}.markdown-body h4 .anchor{line-height: 1.2}.markdown-body h5{font-size: 1em}.markdown-body h5 .anchor{line-height: 1.1}.markdown-body h6{font-size: 1em;color: #777}.markdown-body h6 .anchor{line-height: 1.1}.markdown-body p,.markdown-body blockquote,.markdown-body ul,.markdown-body ol,.markdown-body dl,.markdown-body table,.markdown-body pre{margin-top: 0;margin-bottom: 16px}.markdown-body hr{height: 4px;padding: 0;margin: 16px 0;background-color: #e7e7e7;border: 0 none}.markdown-body ul,.markdown-body ol{padding-left: 2em}.markdown-body ul.no-list,.markdown-body ol.no-list{padding: 0;list-style-type: none}.markdown-body ul ul,.markdown-body ul ol,.markdown-body ol ol,.markdown-body ol ul{margin-top: 0;margin-bottom: 0}.markdown-body li>p{margin-top: 16px}.markdown-body dl{padding: 0}.markdown-body dl dt{padding: 0;margin-top: 16px;font-size: 1em;font-style: italic;font-weight: bold}.markdown-body dl dd{padding: 0 16px;margin-bottom: 16px}.markdown-body blockquote{padding: 0 15px;color: #777;border-left: 4px solid #ddd}.markdown-body blockquote>:first-child{margin-top: 0}.markdown-body blockquote>:last-child{margin-bottom: 0}.markdown-body table{display: block;width: 100%;overflow: auto;word-break: normal;word-break: keep-all}.markdown-body table th{font-weight: bold}.markdown-body table th,.markdown-body table td{padding: 6px 13px;border: 1px solid #ddd}.markdown-body table tr{background-color: #fff;border-top: 1px solid #ccc}.markdown-body table tr:nth-child(2n){background-color: #f8f8f8}.markdown-body img{max-width: 100%;box-sizing: border-box}.markdown-body span.frame{display: block;overflow: hidden}.markdown-body span.frame>span{display: block;float: left;width: auto;padding: 7px;margin: 13px 0 0;overflow: hidden;border: 1px solid #ddd}.markdown-body span.frame span img{display: block;float: left}.markdown-body span.frame span span{display: block;padding: 5px 0 0;clear: both;color: #333}.markdown-body span.align-center{display: block;overflow: hidden;clear: both}.markdown-body span.align-center>span{display: block;margin: 13px auto 0;overflow: hidden;text-align: center}.markdown-body span.align-center span img{margin: 0 auto;text-align: center}.markdown-body span.align-right{display: block;overflow: hidden;clear: both}.markdown-body span.align-right>span{display: block;margin: 13px 0 0;overflow: hidden;text-align: right}.markdown-body span.align-right span img{margin: 0;text-align: right}.markdown-body span.float-left{display: block;float: left;margin-right: 13px;overflow: hidden}.markdown-body span.float-left span{margin: 13px 0 0}.markdown-body span.float-right{display: block;float: right;margin-left: 13px;overflow: hidden}.markdown-body span.float-right>span{display: block;margin: 13px auto 0;overflow: hidden;text-align: right}.markdown-body code,.markdown-body tt{padding: 0;padding-top: 0.2em;padding-bottom: 0.2em;margin: 0;font-size: 85%;background-color: rgba(0,0,0,0.04);border-radius: 3px}.markdown-body code:before,.markdown-body code:after,.markdown-body tt:before,.markdown-body tt:after{letter-spacing: -0.2em;content: "\00a0"}.markdown-body code br,.markdown-body tt br{display: none}.markdown-body del code{text-decoration: inherit}.markdown-body pre>code{padding: 0;margin: 0;font-size: 100%;word-break: normal;white-space: pre;background: transparent;border: 0}.markdown-body .highlight{margin-bottom: 16px}.markdown-body .highlight pre,.markdown-body pre{padding: 16px;overflow: auto;font-size: 85%;line-height: 1.45;background-color: #f7f7f7;border-radius: 3px}.markdown-body .highlight pre{margin-bottom: 0;word-break: normal}.markdown-body pre{word-wrap: normal}.markdown-body pre code,.markdown-body pre tt{display: inline;max-width: initial;padding: 0;margin: 0;overflow: initial;line-height: inherit;word-wrap: normal;background-color: transparent;border: 0}.markdown-body pre code:before,.markdown-body pre code:after,.markdown-body pre tt:before,.markdown-body pre tt:after{content: normal}.markdown-body kbd{display: inline-block;padding: 3px 5px;font-size: 11px;line-height: 10px;color: #555;vertical-align: middle;background-color: #fcfcfc;border: solid 1px #ccc;border-bottom-color: #bbb;border-radius: 3px;box-shadow: inset 0 -1px 0 #bbb}.codehilite{background: #ffffff}.codehilite .c{color: #999988;font-style: italic}.codehilite .err{color: #a61717;background-color: #e3d2d2}.codehilite .k{color: #000000;font-weight: bold}.codehilite .o{color: #000000;font-weight: bold}.codehilite .cm{color: #999988;font-style: italic}.codehilite .cp{color: #999999;font-weight: bold}.codehilite .c1{color: #999988;font-style: italic}.codehilite .cs{color: #999999;font-weight: bold;font-style: italic}.codehilite .gd{color: #000000;background-color: #ffdddd}.codehilite .gd .x{color: #000000;background-color: #ffaaaa}.codehilite .ge{color: #000000;font-style: italic}.codehilite .gr{color: #aa0000}.codehilite .gh{color: #999999}.codehilite .gi{color: #000000;background-color: #ddffdd}.codehilite .gi .x{color: #000000;background-color: #aaffaa}.codehilite .go{color: #888888}.codehilite .gp{color: #555555}.codehilite .gs{font-weight: bold}.codehilite .gu{color: #aaaaaa}.codehilite .gt{color: #aa0000}.codehilite .kc{color: #000000;font-weight: bold}.codehilite .kd{color: #000000;font-weight: bold}.codehilite .kp{color: #000000;font-weight: bold}.codehilite .kr{color: #000000;font-weight: bold}.codehilite .kt{color: #445588;font-weight: bold}.codehilite .m{color: #009999}.codehilite .s{color: #d14}.codehilite .na{color: #008080}.codehilite .nb{color: #0086B3}.codehilite .nc{color: #445588;font-weight: bold}.codehilite .no{color: #008080}.codehilite .ni{color: #800080}.codehilite .ne{color: #990000;font-weight: bold}.codehilite .nf{color: #990000;font-weight: bold}.codehilite .nn{color: #555555}.codehilite .nt{color: #000080}.codehilite .nv{color: #008080}.codehilite .ow{color: #000000;font-weight: bold}.codehilite .w{color: #bbbbbb}.codehilite .mf{color: #009999}.codehilite .mh{color: #009999}.codehilite .mi{color: #009999}.codehilite .mo{color: #009999}.codehilite .sb{color: #d14}.codehilite .sc{color: #d14}.codehilite .sd{color: #d14}.codehilite .s2{color: #d14}.codehilite .se{color: #d14}.codehilite .sh{color: #d14}.codehilite .si{color: #d14}.codehilite .sx{color: #d14}.codehilite .sr{color: #009926}.codehilite .s1{color: #d14}.codehilite .ss{color: #990073}.codehilite .bp{color: #999999}.codehilite .vc{color: #008080}.codehilite .vg{color: #008080}.codehilite .vi{color: #008080}.codehilite .il{color: #009999}
+    </style>
+    <style type="text/css">
+      .markdown-body hr{background:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAACtBE5DAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OENDRjNBN0E2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OENDRjNBN0I2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4Q0NGM0E3ODY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4Q0NGM0E3OTY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PqqezsUAAAAfSURBVHjaYmRABcYwBiM2QSA4y4hNEKYDQxAEAAIMAHNGAzhkPOlYAAAAAElFTkSuQmCC")}
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div id="markup">
+        <article id="content" class="markdown-body">
+          <h1 id="se3-se3">第四章 坐标系的转换(旋转+平移)与<mathjax>$SE(3)$</mathjax>, <mathjax>$se(3)$</mathjax></h1>
+<div class="toc">
+<ul>
+<li><a href="#se3-se3">第四章 坐标系的转换(旋转+平移)与$SE(3)$, $se(3)$</a><ul>
+<li><a href="#41-se3">4.1 $SE(3)$的概念与生成元</a><ul>
+<li><a href="#411-se3">4.1.1 $SE(3)$的概念</a></li>
+<li><a href="#412-se3">4.1.2 $SE(3)$的生成元</a></li>
+</ul>
+</li>
+<li><a href="#42-se3ii">4.2 $se(3)$的概念与切空间($I$处与非$I$处)</a><ul>
+<li><a href="#421-se3">4.2.1 $SE(3)$的切空间</a></li>
+<li><a href="#422-se3">4.2.2 $se(3)$的概念</a></li>
+</ul>
+</li>
+<li><a href="#43">4.3  指数映射及其物理意义</a><ul>
+<li><a href="#431">4.3.1 指数映射的推导</a></li>
+<li><a href="#432-se3-se3">4.3.2 指数映射, $SE(3)$, $se(3)$</a></li>
+<li><a href="#433-se3">4.3.3 $se(3)$上的李括号</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<h3 id="41-se3">4.1 <mathjax>$SE(3)$</mathjax>的概念与生成元</h3>
+<h5 id="411-se3">4.1.1 <mathjax>$SE(3)$</mathjax>的概念</h5>
+<p>在三维空间中, 将一个坐标系转换为另一个坐标系的时候会涉及的坐标系的旋转与平移. 事实上, 任意两个3维坐标系的转换都可以先由旋转矩阵<mathjax>$R$</mathjax>确定的旋转再加上平移向量<mathjax>$T$</mathjax>确定的平移完成.并用<mathjax>$g=(R,T)$</mathjax>来描述这一过程. 使用<mathjax>$\bar{g}=\begin{bmatrix}R&amp;T\\0&amp;1\end{bmatrix}$</mathjax>表示其齐次坐标. 那么确定坐标系的转换(或刚体的运动)就可以使用如下的群完全描述:
+<mathjax>$$SE(3)=\{g=(R,T)|\ R\in SO(3),\ T\in\mathbb{R}^3\}=SO(3)\times \mathbb{R}^3$$</mathjax>
+或是:
+<mathjax>$$SE(3)=\{\bar{g}=\begin{bmatrix}R&amp;T\\0&amp;1\end{bmatrix}|\ R\in SO(3),\ t\in\mathbb{R}^3\}=SO(3)\times \mathbb{R}^3$$</mathjax>
+<mathjax>$SE(3)$</mathjax>又被称为<strong>特殊欧几里得群(Special Euclidean Group)</strong>.下文中不再出现<mathjax>$\bar{g}$</mathjax>, 而用<mathjax>$g$</mathjax>代替.</p>
+<h5 id="412-se3">4.1.2 <mathjax>$SE(3)$</mathjax>的生成元</h5>
+<p>与<mathjax>$SO(3)$</mathjax>类似, <mathjax>$SE(3)$</mathjax>也有生成元的概念. <mathjax>$SE(3)$</mathjax>是在局部与6维欧几里得空间同胚的流形. 拥有如下的六个生成元:
+<mathjax>$$\begin{aligned}
+&amp;G_1=\begin{bmatrix}0&amp;0&amp;0&amp;1\\0&amp;0&amp;0&amp;0\\0&amp;0&amp;0&amp;0\\0&amp;0&amp;0&amp;0\\\end{bmatrix} 
+&amp;G_2=\begin{bmatrix}0&amp;0&amp;0&amp;0\\0&amp;0&amp;0&amp;1\\0&amp;0&amp;0&amp;0\\0&amp;0&amp;0&amp;0\\\end{bmatrix} 
+&amp;G_3=\begin{bmatrix}0&amp;0&amp;0&amp;0\\0&amp;0&amp;0&amp;0\\0&amp;0&amp;0&amp;1\\0&amp;0&amp;0&amp;0\\\end{bmatrix} \\
+&amp;G_4=\begin{bmatrix}0&amp;0&amp;0&amp;0\\0&amp;0&amp;-1&amp;0\\0&amp;1&amp;0&amp;0\\0&amp;0&amp;0&amp;0\\\end{bmatrix} 
+&amp;G_5=\begin{bmatrix}0&amp;0&amp;1&amp;0\\0&amp;0&amp;0&amp;0\\0&amp;0&amp;0&amp;0\\-1&amp;0&amp;0&amp;0\\\end{bmatrix} 
+&amp;G_6=\begin{bmatrix}0&amp;-1&amp;0&amp;0\\1&amp;0&amp;0&amp;0\\0&amp;0&amp;0&amp;0\\0&amp;0&amp;0&amp;0\\\end{bmatrix} 
+\end{aligned}$$</mathjax>
+上式中的6个生成元, <mathjax>$G_1,G_2,G_3$</mathjax>是平移对应的生成元, <mathjax>$G_4,G_5,G_6$</mathjax>是旋转对应的生成元.</p>
+<h3 id="42-se3ii">4.2 <mathjax>$se(3)$</mathjax>的概念与切空间(<mathjax>$I$</mathjax>处与非<mathjax>$I$</mathjax>处)</h3>
+<h5 id="421-se3">4.2.1 <mathjax>$SE(3)$</mathjax>的切空间</h5>
+<ul>
+<li>
+<p><strong><mathjax>$SE(3)$</mathjax>中<mathjax>$I$</mathjax>处的切空间</strong></p>
+<p>对于一个坐标系转换矩阵<mathjax>$g=\begin{bmatrix}R&amp;T\\0&amp;1\end{bmatrix}$</mathjax>, 其逆矩阵为:
+<mathjax>$$g^{-1}=\begin{bmatrix}R^T&amp;-R^TT\\0&amp;1\end{bmatrix}\in SE(3)$$</mathjax>
+现在将<mathjax>$g$</mathjax>看做关于时间<mathjax>$t$</mathjax>的函数: <mathjax>$g(t):\ \mathbb{R}\rightarrow SE(3)$</mathjax>, 所以
+<mathjax>$$g(t)=\begin{bmatrix}R(t)&amp;T(t)\\0&amp;1\end{bmatrix}$$</mathjax>
+其对于时间的导数为:
+<mathjax>$$\dot{g}(t)=\begin{bmatrix}\dot{R}(t)&amp;\dot{T}(t)\\0&amp;0\end{bmatrix}$$</mathjax>
+<mathjax>$g(t)$</mathjax>对于时间的导数还可以写为:
+<mathjax>$$\dot{g}(t)=(\dot{g}(t)g^{-1}(t))g(t)$$</mathjax>
+从而把<mathjax>$g(t)$</mathjax>对于时间的导数写成了<mathjax>$\dot{g}(t)g^{-1}(t)$</mathjax>与<mathjax>$g(t)$</mathjax>的乘积的形式. 现在计算<mathjax>$\dot{g}(t)g^{-1}(t)$</mathjax>可得:
+<mathjax>$$\dot{g}(t)g^{-1}(t)=\begin{bmatrix}\dot{R}(t)R^T(t)&amp;\dot{T}(t)-\dot{R}(t)R^T(t)T(t)\\0&amp;0\end{bmatrix}$$</mathjax>
+观察上式可以发现: <mathjax>$\hat{\omega}(t)=\dot{R}(t)R^T(t)$</mathjax>, 现在定义<mathjax>$v(t)\in\mathbb{R}^3$</mathjax>为
+<mathjax>$$v(t)=\dot{T}(t)-\dot{R}(t)R^T(t)T(t)$$</mathjax>
+再定义矩阵<mathjax>$\hat{\xi}\in\mathbb{R}^4$</mathjax>为:
+<mathjax>$$\hat{\xi}(t)=\begin{bmatrix}\hat{\omega}(t)&amp;v(t)\\0&amp;0\end{bmatrix}$$</mathjax>
+<strong><mathjax>$\hat{\xi}$</mathjax>也称为扭曲矩阵</strong>. <mathjax>$g(t)$</mathjax>对于<mathjax>$t$</mathjax>的导数可以简写为:
+<mathjax>$$\dot{g}(t)=\hat{\xi}(t)g(t)\tag{4.1}$$</mathjax>
+式中<mathjax>$\hat{\xi}(t)$</mathjax>被称为沿着曲线<mathjax>$g(t)$</mathjax>的切向量. 那么在<mathjax>$g(t)$</mathjax>的附近, 有如下的一阶近似:
+<mathjax>$$g(t+dt)\approx g(t)+\dot{g}(t)dt=g(t)+\hat{\xi}(t)g(t)dt=(I+\hat{\xi}(t)dt)g(t)$$</mathjax>
+因为<mathjax>$t=0$</mathjax>时, <mathjax>$g(t)=I$</mathjax>. 所以<mathjax>$SE(3)$</mathjax>在<mathjax>$I$</mathjax>处的切空间是由<mathjax>$\hat{\xi}(t)$</mathjax>构成的. 
+所有<mathjax>$\hat{\xi}(t)$</mathjax>组成的群称为<mathjax>$se(3)$</mathjax>:
+<mathjax>$$se(3)=\left\{\left.\hat{\xi}=\begin{bmatrix}\hat{\omega}&amp;v\\0&amp;0\end{bmatrix}\right|\ \hat{\omega}\in so(3),\ v\in\mathbb{R}^3\right\}$$</mathjax></p>
+<p><mathjax>$se(3)$</mathjax>实际上是<mathjax>$SE(3)$</mathjax>在<mathjax>$I$</mathjax>处的切空间.</p>
+</li>
+<li>
+<p><strong><mathjax>$SE(3)$</mathjax>中非<mathjax>$I$</mathjax>处的切空间</strong></p>
+<p>如果<mathjax>$g(t)\neq I$</mathjax>, 在此处的切空间由式<mathjax>$(4.1)$</mathjax>可知
+<mathjax>$$\dot{g}(t)=\hat{\xi}(t)g(t)$$</mathjax>
+式中<mathjax>$\hat{\xi}(t)$</mathjax>表示的是<mathjax>$I$</mathjax>处的切空间, 右乘<mathjax>$g(t)$</mathjax>即是<mathjax>$g(t)$</mathjax>处的切空间.</p>
+</li>
+</ul>
+<h5 id="422-se3">4.2.2 <mathjax>$se(3)$</mathjax>的概念</h5>
+<p><mathjax>$SE(3)$</mathjax>在<mathjax>$I$</mathjax>处的切空间是由<mathjax>$\hat{\xi}(t)$</mathjax>构成的. 
+所有<mathjax>$\hat{\xi}(t)$</mathjax>组成的群称为<mathjax>$se(3)$</mathjax>:
+<mathjax>$$se(3)=\left\{\left.\hat{\xi}=\begin{bmatrix}\hat{\omega}&amp;v\\0&amp;0\end{bmatrix}\right|\ \hat{\omega}\in so(3),\ v\in\mathbb{R}^3\right\}$$</mathjax></p>
+<p><mathjax>$se(3)$</mathjax>实际上是<mathjax>$SE(3)$</mathjax>在<mathjax>$I$</mathjax>处的切空间. 实际上,<strong><mathjax>$se(3)$</mathjax>是李群<mathjax>$SE(3)$</mathjax>的李代数, 其二元运算是<mathjax>$se(3)$</mathjax>的李括号</strong>.</p>
+<h3 id="43">4.3  指数映射及其物理意义</h3>
+<h5 id="431">4.3.1 指数映射的推导</h5>
+<p>当仅考虑时刻<mathjax>$0$</mathjax>与<mathjax>$t$</mathjax>的坐标系的转换的时候, 转换的中间状态就可以不考虑. 此时矩阵<mathjax>$\hat{\xi}(t)$</mathjax>就可以看成常数<mathjax>$\hat{\xi}$</mathjax>, 式<mathjax>$(4.1)$</mathjax>就可以写成如下的形式:
+<mathjax>$$\dot{g}(t)=\hat{\xi}g(t)$$</mathjax>
+上式实际上是一个常线性微分方程, 解得:
+<mathjax>$$g(t)=e^{\hat{\xi}t}$$</mathjax>
+上式中的指数<mathjax>$\hat{\xi}$</mathjax>是一个矩阵, 其定义如下:
+<mathjax>$$e^{\hat{\xi}t}=I+\hat{\xi}t+\frac{(\hat{\xi}t)^2}{2!}+\cdots+\frac{(\hat{\xi}t)^n}{n!}+\cdots$$</mathjax>
+通过前面介绍的<strong>Rodrigues公式</strong>可知, <mathjax>$e^{\hat{\xi}t}$</mathjax>计算结果如下:
+<mathjax>$$e^{\hat{\xi}t}=\begin{bmatrix}e^{\hat{\omega}t}&amp;(I-e^{\hat{\omega}t})\hat{\omega}v+\omega{\omega}^Tvt\\0&amp;1\end{bmatrix}\tag{4.2}$$</mathjax>
+从上式可以看出<mathjax>$e^{\hat{\xi}t}$</mathjax>s是一个表示刚体运动的转换矩阵, 也就是<mathjax>$SE(3)$</mathjax>中的元素. 所以指数映射把<mathjax>$se(3)$</mathjax>的元素映射到了<mathjax>$SE(3)$</mathjax></p>
+<h5 id="432-se3-se3">4.3.2 指数映射, <mathjax>$SE(3)$</mathjax>, <mathjax>$se(3)$</mathjax></h5>
+<p><mathjax>$se(3)$</mathjax>到<mathjax>$SE(3)$</mathjax>的指数映射定义如下:
+<mathjax>$$\begin{aligned} {\rm exp}:se(3) &amp; \rightarrow SE(3) \\ \hat{\xi}\in se(3) &amp; \mapsto e^{\hat{\xi}t}\in SE(3)\end{aligned}$$</mathjax>
+扭曲矩阵<mathjax>$\hat{\xi}\in se(3)$</mathjax>又称为<mathjax>$SE(3)$</mathjax>的<strong>指数坐标</strong>.</p>
+<p>那么, 指数映射是满射, 双射, 还是单射?</p>
+<ul>
+<li>
+<p><strong>指数映射是满射</strong></p>
+<p>对于任意的<mathjax>$g\in SE(3)$</mathjax>, 都存在(并一定唯一)扭曲坐标<mathjax>$\xi=(v,\omega)$</mathjax>并且<mathjax>$t\in\mathbb{R}$</mathjax>使得<mathjax>$g=e^{\hat{\xi}t}$</mathjax></p>
+<p><strong>证明</strong>: 使用构造的方法进行证明. 假设<mathjax>$g=(R,T)$</mathjax>. 对于旋转矩阵<mathjax>$R\in SO(3)$</mathjax>可以很容易的找到<mathjax>$(\omega, t)$</mathjax>且<mathjax>$||\omega||=1$</mathjax>使得<mathjax>$e^{\hat{\omega}t}=R$</mathjax>. </p>
+<p>如果<mathjax>$t\neq 0$</mathjax>, 由式<mathjax>$(4.2)$</mathjax>可解得<mathjax>$v\in\mathbb{R}^3$</mathjax>如下:
+<mathjax>$$(I-e^{\hat{\omega}t})\hat{\omega}v+\omega{\omega}^Tvt=T\quad\Rightarrow\quad v=[(I-e^{\hat{\omega}t})\hat{\omega}+\omega{\omega}^Tt]^{-1}T$$</mathjax></p>
+</li>
+<li>
+<p><strong>指数映射不是双射</strong></p>
+<p>与<mathjax>$SO(3)$</mathjax>上的指数映射相似. 扭曲矩阵<mathjax>$\hat{\omega}$</mathjax>通过指数映射映射到转换矩阵<mathjax>$e^{\hat{\omega}t}$</mathjax>. 因为转换矩阵中也包含了旋转矩阵, 那对于一个<mathjax>$SE(3)$</mathjax>上的元素就有无数多个<mathjax>$so(3)$</mathjax>中的元素相对应, 从而<mathjax>$se(3)$</mathjax>与<mathjax>$SE(3)$</mathjax>上的元素不是一一对应的, 从而不是双射.</p>
+</li>
+</ul>
+<h5 id="433-se3">4.3.3 <mathjax>$se(3)$</mathjax>上的李括号</h5>
+<p><mathjax>$se(3)$</mathjax>上的李括号计算如下:
+<mathjax>$$[\hat{\omega}_1,\hat{\omega}_2]=\hat{\omega}_1\hat{\omega}_2-\hat{\omega}_2\hat{\omega}_1=\begin{bmatrix}\widehat{\omega_1\times\omega_2} &amp; \omega_1\times v_2-\omega_2\times v_1\\0&amp;0\end{bmatrix}\in se(3)$$</mathjax></p>
+<p><mathjax>$se(3)$</mathjax>的群结构及其上的李括号运算共同构成了李群<mathjax>$SE(3)$</mathjax>的李代数.</p>
+<p>两个刚体的运动<mathjax>$g_1=e^{\hat{\omega}_1},g_1=e^{\hat{\omega}_2}$</mathjax>在<mathjax>$[\omega_1,\omega_2]=0$</mathjax>的情况下是可交换的, 即<mathjax>$g_1g_2=g_2g_1$</mathjax></p>
+        </article>
+      </div>
+    </div>
+  </body>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+          displayMath: [ ['$$', '$$'], ["\\[", "\\]"] ],
+          processEscapes: true
+        },
+        TeX: {
+          equationNumbers: {
+            autoNumber: 'AMS'
+          }
+        },
+        "HTML-CSS": {
+          imageFont: null
+        }
+      });
+  </script>
+  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/2.1-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</html>
